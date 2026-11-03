@@ -1,106 +1,83 @@
-# ApplySpark: 2-Minute Cinematic Prop Video Script
+# ApplySpark: 2-Minute Cinematic Prop Video Script (v3)
 
-**Format:** 16:9, about 2:00, cinematic business-proposal style (slow push-ins, shallow depth of field, music-led).
+**Format:** 16:9, 2:00, cinematic business-proposal style, music-led, subtitles only for 5 short lines.
 **Tagline:** Thắp sáng tiềm năng hồ sơ
-**Tone:** quiet, human, confident. Few spoken lines; on-screen text and music carry the story.
-**Palette:** navy (#0B1F44) and gold (#F2B632). Cool desk light at the start, warm gold light as ApplySpark appears.
+**Palette:** navy and gold. Cool, dark grade while Khoi struggles; warm gold once he finds ApplySpark.
 
-## Cast (prop video)
+## Story
 
-| Character | Role | Look / prop |
-|---|---|---|
-| **Khoi** | The student | Hoodie, laptop, 12+ browser tabs, sticky notes |
-| **Kien** | Parent of Khoi | Reading glasses, tea, calculator and a consultancy brochure |
-| **Phuc** | Homeroom teacher | Classroom, whiteboard, lanyard |
-| **Tuan Minh** | Study-abroad consultancy centre advisor | Smart-casual, small office with a world map |
+Khoi loves the idea of studying abroad but is lost: which clubs to join, which extracurriculars matter, and what path to follow. His parent tells him to go and ask about it. At a consultancy centre he is shown a price and walks away sad. His friend Kien then suggests ApplySpark. He tries it and finds a free, clear path.
 
-## Voiceover budget: 5 lines in total (about 25 s of speech)
+## Cast
 
-Everything else is music, sound design and on-screen text.
+| Character | Role in this version |
+|---|---|
+| **Khoi** | Student, loves study abroad but has no path |
+| **Parent** | Unnamed parent (Kien's old role is now a friend) who tells him to go ask about it |
+| **Tuan Minh** | Study-abroad consultancy centre advisor, shows the price |
+| **Kien** | Khoi's friend, suggests ApplySpark |
+| **Phuc** | Homeroom teacher, optional cameo (not in this cut) |
 
-| ID | Speaker | Vietnamese | English subtitle |
+## Voicelines (5 total, subtitles only)
+
+| ID | Speaker | Vietnamese | English |
 |---|---|---|---|
-| V1 | Khoi (VO, tired) | "Mình có quá nhiều thứ phải theo dõi." | "There's so much to keep track of." |
-| V2 | Kien | "Tư vấn trọn gói... đắt quá." | "Full-service advice... it's too expensive." |
-| V3 | Phuc | "Thử ApplySpark đi em. Tìm trường, lưu danh sách, nhắc hạn nộp." | "Try ApplySpark. Find schools, save a list, get deadline reminders." |
-| V4 | Tuan Minh | "Chúng tôi đồng hành cùng những hồ sơ đã sẵn sàng." | "We support applications that are ready." |
-| V5 | Khoi | "Giờ mình biết mình đang đi đâu." | "Now I know where I'm headed." |
+| V1 | Khoi | "Mình muốn đi du học… nhưng chưa biết bắt đầu từ đâu." | "I want to study abroad... but I don't know where to start." |
+| V2 | Parent | "Con thích du học thì đi hỏi thử xem." | "If you like studying abroad, go and ask." |
+| V3 | Kien | "Thử ApplySpark đi. Miễn phí, tìm trường, CLB, hạn nộp." | "Try ApplySpark. It's free: schools, clubs, deadlines." |
+| V4 | Khoi | "Giờ mình biết mình đang đi đâu." | "Now I know where I'm headed." |
+
+(The price scene has no spoken line; the quote card on the table carries it.)
 
 ## Shot list
 
-### Scene 1: Chaos (0:00-0:18)
-Night, Khoi's room. Cold light, ticking clock.
-- **S1a** (0:00-0:06) Extreme close-up on laptop screen: many tabs, a spreadsheet, a calendar with red dates. *Slow push-in.* Sound: keyboard, ticking.
-- **S1b** (0:06-0:12) Over-the-shoulder, Khoi rubs his eyes. Sticky notes ("IELTS", "deadline?", "học bổng?") around the monitor. *Handheld, shallow focus.*
-- **S1c** (0:12-0:18) Top-down shot of the desk, papers everywhere. **V1** (VO). On-screen text: "Hàng chục trường. Hàng chục hạn nộp." (Dozens of schools. Dozens of deadlines.)
+### Act 1: The struggle (0:00-0:38)
+Copied from the Firstship reference: opening doors reveal, foreground blur, push-ins, dutch-angle screen.
+| Time | Shot | Camera |
+|---|---|---|
+| 0:00-0:05 | Doors slide open to reveal Khoi at his desk | Push-in, doors animate apart |
+| 0:05-0:10 | Khoi at his laptop, blurred silhouette in the foreground | Over-the-shoulder, slow dolly |
+| 0:10-0:16 | Club-flyer noticeboard, Khoi small on the left: "Câu lạc bộ? Hoạt động ngoại khóa?" | Pan right-to-left, push-in |
+| 0:16-0:22 | Khoi close-up, **V1** | Slow push-in |
+| 0:22-0:27 | Top-down desk with sticky notes and papers | Slow rotation and push |
+| 0:27-0:33 | Tilted board: "Du học: bắt đầu từ đâu?" with Chọn nước? Chọn ngành? Hoạt động ngoại khóa? Học bổng? Hạn nộp? | Dutch angle, push-in |
+| 0:33-0:38 | Navy card: "Muốn du học. Chưa có lộ trình." | Slow zoom |
 
-### Scene 2: The cost worry (0:18-0:36)
-Kitchen table, Kien with a brochure and calculator.
-- **S2a** (0:18-0:25) Medium two-shot: Kien reading the brochure, Khoi stands in the doorway. *Slow dolly in on Kien.*
-- **S2b** (0:25-0:31) Insert close-up of the calculator display. **V2.** On-screen text: "Tư vấn trọn gói: chi phí lớn với nhiều gia đình" (Full-service advice is a large cost for many families). Do not show a specific price unless sourced.
-- **S2c** (0:31-0:36) Slow push-in on Khoi's face, then cut to black.
+### Act 2: The price (0:38-1:07)
+| Time | Shot | Camera |
+|---|---|---|
+| 0:38-0:45 | Parent at the kitchen table, **V2** | Slow dolly toward the parent |
+| 0:45-0:51 | Tuan Minh's consultancy office, world map behind him | Wide, push-in |
+| 0:51-0:57 | Khoi sits across from Tuan Minh | Over-the-shoulder, blurred foreground |
+| 0:57-1:02 | Insert: price sheet "?,???,??? VND" (no real figure shown, a sourced price needs checking first) | Push-in |
+| 1:02-1:07 | Khoi's sad face, close-up | Slow push, cool grade |
 
-### Scene 3: The spark (0:36-0:56)
-Classroom after school, warm window light.
-- **S3a** (0:36-0:42) Wide shot, Phuc erasing the whiteboard, Khoi lingers. *Slow pan across the empty classroom.*
-- **S3b** (0:42-0:50) Medium close-up, Phuc turns and speaks (**V3**). Over-the-shoulder reverse on Khoi.
-- **S3c** (0:50-0:56) Insert: Phuc writes **applysparkvn.com** on the board in gold chalk. Light shifts from cool to warm. Music lifts.
+### Act 3: The turn (1:07-1:54)
+| Time | Shot | Camera |
+|---|---|---|
+| 1:07-1:14 | Khoi and his friend Kien on the school steps, laptop between them, **V3** | Slow push toward the laptop, warm light |
+| 1:14-1:19 | ApplySpark homepage: "Thắp sáng tiềm năng hồ sơ" | Tilted UI card, push-in |
+| 1:19-1:25 | University page: rankings, costs, deadlines | Push-in with slight rotation |
+| 1:25-1:31 | Saved list, deadline timeline, roadmap | Pan right, push-in |
+| 1:31-1:37 | Profile analyzer: "Gợi ý hồ sơ, không phải cam kết đậu" | Push toward the score |
+| 1:37-1:42 | Tools: Clubs, Competitions, Internships, Alumni, Archive, Teams | Pull-in |
+| 1:42-1:48 | Agencies directory + "Basic miễn phí" | Slow push |
+| 1:48-1:54 | Khoi walks out through a golden door, **V4** | Low angle, pull-back |
 
-### Scene 4: Product moment (0:56-1:22)
-Screen-recording style, with 3D parallax or dolly on a floating laptop.
-- **S4a** (0:56-1:03) *Orbit shot* around the laptop showing the homepage. Logo animates (navy A, gold star). On-screen text: "Thắp sáng tiềm năng hồ sơ".
-- **S4b** (1:03-1:10) Screen push-in on a university page (overview, rankings, costs, deadlines). On-screen text: "Nghiên cứu trường toàn cầu, một nơi" (Global university research in one place).
-- **S4c** (1:10-1:16) Quick cuts: the saved list, the deadline timeline, and the roadmap generator counting the months left.
-- **S4d** (1:16-1:22) Profile analyzer card appears. Caption: "Gợi ý hồ sơ, không phải cam kết đậu" (Profile guidance, not an admissions guarantee).
+### End card (1:54-2:00)
+Blue card: logo, "Thắp sáng tiềm năng hồ sơ", applysparkvn.com. Music resolves.
 
-### Scene 5: Parent relief (1:22-1:34)
-- **S5a** (1:22-1:28) Kitchen, Kien puts the brochure aside and looks at Khoi's screen over his shoulder. *Slow rack focus from brochure to screen.*
-- **S5b** (1:28-1:34) Close-up on Kien's face softening. Caption: "Gói Basic miễn phí" (Basic plan is free). Do not call Premium/VIP available (they are marked "Coming soon").
+## Sound
+- Low ambient pad, clock ticks while Khoi struggles, a kick pulse builds from 1:07, chimes as the saved list and deadlines appear, a swell to the logo hit.
 
-### Scene 6: Consultancy partnership (1:34-1:48)
-Tuan Minh's office with a world map behind him.
-- **S6a** (1:34-1:41) Wide, then slow push-in as Tuan Minh looks at a profile on his laptop. **V4.**
-- **S6b** (1:41-1:48) Insert: the ApplySpark "Agencies" directory (checked consultancies). Caption: "Kết nối trung tâm tư vấn uy tín" (Connect with vetted advisory centres).
+## Fact guardrails (ApplySpark dossier)
+- The price sheet shows "?,???,???". Any real consultancy price (e.g. 50-100m VND) is a proposal claim needing evidence.
+- Basic is free. Premium (49,000 VND/month) and VIP (149,000 VND/month) are "Coming soon", so they are not shown as live.
+- The 22 Premium/VIP accounts are test/complimentary access, not paying users.
+- The profile score is guidance, not an admissions probability.
+- Tools shown (Clubs, Competitions, Internships, Alumni, Archive, Teams, Agencies) come from the October 2026 homepage list.
+- Don't show emails or phone numbers.
 
-### Scene 7: Resolution (1:48-2:00)
-- **S7a** (1:48-1:54) Golden-hour exterior, Khoi on school steps. *Low angle, then crane up.* **V5.**
-- **S7b** (1:54-2:00) Cut to the ApplySpark logo on navy, gold star flare. Text: "ApplySpark | Thắp sáng tiềm năng hồ sơ | applysparkvn.com". Music resolves.
-
-## Camera and sound cheat sheet
-
-- **Moves:** slow push-ins for emotion, a single orbit for the product reveal, a rack focus for the parent's change of mind.
-- **Grade:** cold teal shadows in scenes 1-2, warm gold highlights from scene 3 onward.
-- **Music:** low ambient pulse, builds from 0:36, peaks at the logo reveal (1:54), then a soft tail.
-- **SFX:** keyboard, clock tick, chalk, a soft chime when the saved list appears.
-
-## Fact guardrails (from the ApplySpark dossier)
-
-- Use "65 universities across 16 countries" only if re-checked on the live homepage (24 Oct 2026 observation); older copy said 61 universities across 12-13 countries.
-- Do not say "22 paying users". The 22 Premium/VIP accounts are test/complimentary access.
-- Premium (49,000 VND/month) and VIP (149,000 VND/month) are "Coming soon" list prices; Basic is free.
-- The AI profile score is guidance, not a validated admissions probability.
-- Treat any "50-100 m VND consultancy price" comparison as a proposal claim needing evidence before public use.
-- Don't claim an always-on AI assistant or uptime without a fresh test.
-- Keep individual emails and phone numbers off screen.
-
-## Lightweight production plan (cheap to make)
-
-1. **Visuals:** stylised animated props (flat illustrated characters on simple sets) with camera moves done as pans, zooms and parallax. No photoreal rendering needed.
-2. **Product shots:** screen recordings of applysparkvn.com on a mocked laptop frame.
-3. **Audio:** 5 VO lines recorded in Vietnamese, a royalty-free cinematic track, and basic SFX.
-4. **Build:** a code-rendered motion video (about 8 scenes, canvas or HTML to MP4) via the motion-reel skill, or edit in CapCut/Canva using this shot list.
-
-## Angles copied from the Firstship reference (v2 build)
-
-| Firstship reference | ApplySpark equivalent in the built video |
-|---|---|
-| Elevator doors slide open, reveal | Doors slide apart to reveal Khoi's desk (0:00) |
-| Wide shot with blurred foreground figure (over-the-shoulder) | Khoi's room with a blurred silhouette in the foreground (0:06) |
-| Medium push-in on a stressed face | Khoi push-in with subtitle V1, then extreme close-up (0:12-0:24) |
-| Dutch-angle tilted laptop screen (rejection email) | Tilted spreadsheet of deadlines (0:30-0:37) |
-| Navy stat card | "Hàng chục trường. Hàng chục hạn nộp." card (0:37) |
-| Product UI cards on light background | Tilted ApplySpark UI mockups with a gold glow, push-ins and slight rotation (0:66-1:30) |
-| Blue end card with URL pill | Blue end card with logo, tagline and applysparkvn.com (1:54) |
-
-Built video: `ApplySpark_Prop_Video.mp4` (960x540, 24 fps, 2:00, synthesized score, subtitles only, no recorded voice).
+## Build
+`ApplySpark_Prop_Video.mp4`: 960x540, 24 fps, synthesized score, subtitles only (no recorded voice).
 Rebuild: `python3 render_audio.py && python3 render_video.py silent.mp4`, then mux with ffmpeg.

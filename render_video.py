@@ -140,6 +140,10 @@ def ui_agency(d,p):
     nav(d); txt(d,(260,290),"Trung tâm tư vấn đã kiểm chứng",F(46),NAVY)
     for i in range(3):
         rr(d,(260+i*470,380,690+i*470,800),18,WHITE,GOLD if i==0 else (210,215,225),5 if i==0 else 3); d.ellipse((300+i*470,420,380+i*470,500),fill=NAVY); txt(d,(300+i*470,540),["Tuan Minh Consulting","Trung tâm B","Trung tâm C"][i],F(32),NAVY,'lm'); txt(d,(300+i*470,600),"✓ Đã kiểm chứng",F(28,False),(40,140,80),'lm'); txt(d,(300+i*470,660),"Mã giảm giá Premium",F(26,False),(90,100,120),'lm')
+def ui_tools(d,p):
+    nav(d); txt(d,(260,290),"Công cụ cho hồ sơ du học",F(46),NAVY)
+    for i,(t,u) in enumerate([("Câu lạc bộ","Clubs"),("Cuộc thi","Competitions"),("Thực tập","Internships"),("Alumni","Alumni"),("Hồ sơ mẫu","Archive"),("Đội nhóm","Teams")]):
+        x=260+(i%3)*470; y=380+(i//3)*250; rr(d,(x,y,x+430,y+210),18,(255,248,230) if i%2==0 else WHITE,GOLD if i==int(p*6) else (210,215,225),5); d.ellipse((x+25,y+30,x+85,y+90),fill=NAVY); txt(d,(x+25,y+130),t,F(36),NAVY,'lm'); txt(d,(x+25,y+175),u,F(24,False),(100,110,130),'lm')
 def set_office(p=0):
     im,d=new((200,205,215)); d.rectangle((250,100,1670,700),fill=(40,70,110))
     for (x,y,w,h) in [(400,250,330,200),(800,200,260,150),(950,400,200,230),(1280,260,260,220),(1350,500,180,100),(500,520,160,100)]: d.ellipse((x,y,x+w,y+h),fill=(80,150,130))
@@ -158,36 +162,69 @@ def set_end(p=0):
     im,d=new((22,70,160)); logo(d,W//2-90,230,180,True); wordmark(d,W//2-250,450,120,True)
     txt(d,(W//2,640),"Thắp sáng tiềm năng hồ sơ",F(64,True,True),WHITE,'mm')
     rr(d,(W//2-340,760,W//2+340,850),44,WHITE); txt(d,(W//2,805),"applysparkvn.com",F(46),NAVY,'mm'); return im
-def set_face(p=0):
+SADMODE=[False]
+def set_face(p=0,sad=False):
     im,d=new((20,32,44)); shelf(d,0,0,W,H,3); im=im.filter(ImageFilter.GaussianBlur(25)); d=ImageDraw.Draw(im)
     d.rounded_rectangle((560,760,1360,1300),200,fill=(235,240,248)); d.ellipse((650,180,1270,860),fill=(236,196,160)); d.pieslice((630,140,1290,640),180,360,fill=(25,25,30))
     for ex in(780,1140): d.ellipse((ex-30,470,ex+30,510),fill=(30,30,30))
     for ex in(780,1140): d.ellipse((ex-110,420,ex+110,560),outline=(20,20,20),width=10)
     d.line((890,490,1030,490),fill=(20,20,20),width=10)
     d.rounded_rectangle((680,640,860,880),90,fill=(236,196,160)); d.rounded_rectangle((1060,640,1240,880),90,fill=(226,186,150)) # hands
-    d.arc((880,640,1040,720),20,160,fill=(150,70,60),width=8); return im
+    d.arc((880,640,1040,720),200,340,fill=(150,70,60),width=8) if SADMODE[0] else d.arc((880,640,1040,720),20,160,fill=(150,70,60),width=8); return im
+
+def set_sad(p=0):
+    SADMODE[0]=True; im=set_face(); SADMODE[0]=False; return im
+def set_club(p=0):
+    im,d=new((60,50,45)); rr(d,(200,100,1720,900),14,(190,150,100),(110,70,40),16)
+    rng=np.random.RandomState(8)
+    for i,t in enumerate(["CLB Tranh biện","Tình nguyện","Robotics","Âm nhạc","Thể thao","Khởi nghiệp","Báo chí","Cuộc thi?"]):
+        x=260+(i%4)*370; y=170+(i//4)*340; sh=Image.new('RGBA',(300,260),(0,0,0,0)); sd=ImageDraw.Draw(sh)
+        sd.rectangle((0,0,299,259),fill=tuple(int(v) for v in rng.randint(190,255,3))+(255,)); sd.text((150,130),t,font=F(34),fill=(30,40,70,255),anchor='mm'); sd.ellipse((140,8,160,28),fill=(200,40,40,255))
+        sh=sh.rotate(rng.randint(-8,8),expand=True); im.paste(sh,(x,y),sh)
+    d=ImageDraw.Draw(im); person(d,260,380,0.9,(235,240,248),glasses=True,tie=NAVY)
+    txt(d,(1450,60),"? ? ?",F(70),(255,200,90),'mm'); return im
+def set_path(p=0):
+    im,d=new((16,20,28)); rr(d,(160,90,1760,990),24,(245,247,250)); txt(d,(960,200),"Du học: bắt đầu từ đâu?",F(70),NAVY,'mm')
+    for i,t in enumerate(["Chọn nước?","Chọn ngành?","Hoạt động ngoại khóa?","Học bổng?","Hạn nộp?","Luận văn?"]):
+        x=260+(i%3)*500; y=330+(i//3)*280; rr(d,(x,y,x+440,y+200),24,(255,248,230),GOLD,4); txt(d,(x+220,y+100),t,F(38),NAVY,'mm')
+    txt(d,(960,900),"?",F(90),(200,40,40),'mm'); return im
+def set_parent(p=0):
+    im=set_kitchen(); d=ImageDraw.Draw(im); d.rectangle((880,600,1520,830),fill=(130,92,60)); d.rectangle((200,760,1720,830),fill=(110,70,44))
+    person(d,1250,360,1.1,(150,95,110),skin=(226,180,140),hair=(40,30,30)); rr(d,(900,650,1100,780),10,(240,240,245)); d.ellipse((960,780,1040,830),fill=(240,240,240)); return im
+def set_meet(p=0):
+    im=set_office(); d=ImageDraw.Draw(im); d.rectangle((0,0,520,H),fill=(30,36,46)); person(d,240,340,1.3,(235,240,248),glasses=True,tie=NAVY); return im
+def set_price(p=0):
+    im,d=new((200,205,215)); rr(d,(380,100,1540,980),12,(250,250,245)); txt(d,(960,230),"Báo giá tư vấn",F(76),NAVY,'mm')
+    for i in range(3): d.line((520,360+i*100,1400,360+i*100),fill=(200,205,215),width=6)
+    txt(d,(960,640),"?,???,??? VND",F(120),(200,40,40),'mm'); return im
+def set_friends(p=0):
+    im,d=new((255,215,160)); d.rectangle((0,0,W,620),fill=(190,215,235)); d.rectangle((0,620,W,H),fill=(150,120,95)); 
+    for i in range(4): d.rectangle((0,700+i*70,W,740+i*70),fill=(165,135,108))
+    person(d,640,200,1.4,(235,240,248),glasses=True,tie=NAVY); person(d,1320,230,1.4,(50,100,170),hair=(60,40,25)); laptop(d,980,640,420,240,(215,225,245))
+    return im
 # ---------- shots: (set, dur, cam0(cx,cy,z), cam1, rot0, rot1, grade, sub, caption, fg) ----------
 cool=(30,60,110,60); warm=(255,170,60,45); neu=(0,0,0,0)
 C=lambda x,y,z:(x,y,z)
 S=[
- (set_door,6,C(960,540,1.05),C(960,540,1.5),0,0,cool,None,None,None),
- (set_room,6,C(900,520,1.0),C(1050,470,1.5),0,0,cool,None,None,'ots'),
- (set_room,6,C(1000,420,2.0),C(1050,400,2.6),0,0,cool,"“Mình có quá nhiều thứ phải theo dõi.”",None,None),
- (set_face,6,C(960,500,1.0),C(960,480,1.35),0,0,cool,None,None,None),
- (set_top,6,C(960,540,1.0),C(1000,420,1.6),-6,8,cool,None,None,None),
- (set_screen,7,C(1000,540,1.1),C(700,420,2.2),8,12,cool,None,None,None),
- (card(["Hàng chục trường.","Hàng chục hạn nộp."],"Dozens of schools. Dozens of deadlines."),6,C(960,540,1.0),C(960,540,1.08),0,0,neu,None,None,None),
- (set_kitchen,6,C(1100,540,1.0),C(850,460,1.6),0,0,neu,"“Tư vấn trọn gói… đắt quá.”",None,None),
- (set_calc,5,C(960,540,1.0),C(960,500,1.35),0,0,neu,None,"Tư vấn trọn gói: khoản chi lớn",None),
- (set_class,6,C(700,540,1.1),C(1250,520,1.5),0,0,warm,"“Thử ApplySpark đi em. Tìm trường, nhắc hạn nộp.”",None,None),
- (set_chalk,6,C(960,540,1.0),C(960,540,1.25),0,0,warm,None,None,None),
- (ui_frame(ui_home),6,C(960,540,1.0),C(960,480,1.35),-6,0,warm,None,"Thắp sáng tiềm năng hồ sơ",None),
+ (set_door,5,C(960,540,1.05),C(960,540,1.5),0,0,cool,None,None,None),
+ (set_room,5,C(900,520,1.0),C(1050,470,1.5),0,0,cool,None,None,'ots'),
+ (set_club,6,C(1200,500,1.0),C(500,520,1.7),0,0,cool,None,"Câu lạc bộ? Hoạt động ngoại khóa?",None),
+ (set_room,6,C(1000,420,2.0),C(1050,400,2.6),0,0,cool,"“Mình muốn đi du học… nhưng chưa biết bắt đầu từ đâu.”",None,None),
+ (set_top,5,C(960,540,1.0),C(1000,420,1.6),-6,8,cool,None,None,None),
+ (set_path,6,C(1000,540,1.1),C(800,480,1.9),8,12,cool,None,None,None),
+ (card(["Muốn du học.","Chưa có lộ trình."],"He loves studying abroad. He has no path yet."),5,C(960,540,1.0),C(960,540,1.08),0,0,neu,None,None,None),
+ (set_parent,7,C(1100,540,1.0),C(850,460,1.6),0,0,neu,"“Con thích du học thì đi hỏi thử xem.”",None,None),
+ (set_office,6,C(960,540,1.0),C(980,500,1.5),0,0,neu,None,"Trung tâm tư vấn du học",None),
+ (set_meet,6,C(900,540,1.0),C(1100,500,1.5),0,0,neu,None,None,'ots'),
+ (set_price,5,C(960,540,1.0),C(960,600,1.3),0,0,neu,None,None,None),
+ (set_sad,5,C(960,500,1.0),C(960,480,1.35),0,0,cool,None,None,None),
+ (set_friends,7,C(960,540,1.1),C(1250,560,1.8),0,0,warm,"“Thử ApplySpark đi. Miễn phí, tìm trường, CLB, hạn nộp.”",None,None),
+ (ui_frame(ui_home),5,C(960,540,1.0),C(960,480,1.35),-6,0,warm,None,"Thắp sáng tiềm năng hồ sơ",None),
  (ui_frame(ui_uni),6,C(900,560,1.0),C(1000,520,1.5),0,4,warm,None,"Nghiên cứu trường toàn cầu, một nơi",None),
  (ui_frame(ui_saved),6,C(1000,520,1.1),C(1300,600,1.7),5,0,warm,None,"Danh sách · Hạn nộp · Lộ trình",None),
  (ui_frame(ui_profile),6,C(960,540,1.0),C(700,600,1.6),0,-5,warm,None,"Gợi ý hồ sơ, không phải cam kết đậu",None),
- (set_kitchen,7,C(900,520,1.2),C(1180,640,1.9),0,0,warm,None,"Gói Basic miễn phí",'ots2'),
- (set_office,6,C(960,540,1.0),C(980,500,1.5),0,0,warm,"“Chúng tôi đồng hành cùng những hồ sơ đã sẵn sàng.”",None,None),
- (ui_frame(ui_agency),5,C(960,540,1.0),C(1100,560,1.35),0,0,warm,None,"Kết nối trung tâm tư vấn uy tín",None),
+ (ui_frame(ui_tools),5,C(960,540,1.0),C(1100,560,1.4),0,0,warm,None,"CLB · Cuộc thi · Thực tập · Alumni",None),
+ (ui_frame(ui_agency),6,C(960,540,1.0),C(1100,560,1.35),0,0,warm,None,"Basic miễn phí · Trung tâm uy tín",None),
  (set_exit,6,C(960,540,1.2),C(1100,420,1.0),0,0,warm,"“Giờ mình biết mình đang đi đâu.”",None,None),
  (set_end,6,C(960,540,1.0),C(960,540,1.06),0,0,neu,None,None,None),
 ]
@@ -206,7 +243,7 @@ def subimg(text,font,maxw=1500):
 cache={}
 def getset(i,p):
     fn=S[i][0]
-    if fn in (set_door,set_chalk,set_exit,ui_frame) or i in(12,13,14,17) or fn.__name__ in('f',):
+    if fn in (set_door,set_chalk,set_exit) or fn.__name__=='f':
         return fn(p)
     if i not in cache: cache[i]=fn(0)
     return cache[i]
