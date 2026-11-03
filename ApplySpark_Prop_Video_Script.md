@@ -89,3 +89,18 @@ Tuan Minh's office with a world map behind him.
 2. **Product shots:** screen recordings of applysparkvn.com on a mocked laptop frame.
 3. **Audio:** 5 VO lines recorded in Vietnamese, a royalty-free cinematic track, and basic SFX.
 4. **Build:** a code-rendered motion video (about 8 scenes, canvas or HTML to MP4) via the motion-reel skill, or edit in CapCut/Canva using this shot list.
+
+## Angles copied from the Firstship reference (v2 build)
+
+| Firstship reference | ApplySpark equivalent in the built video |
+|---|---|
+| Elevator doors slide open, reveal | Doors slide apart to reveal Khoi's desk (0:00) |
+| Wide shot with blurred foreground figure (over-the-shoulder) | Khoi's room with a blurred silhouette in the foreground (0:06) |
+| Medium push-in on a stressed face | Khoi push-in with subtitle V1, then extreme close-up (0:12-0:24) |
+| Dutch-angle tilted laptop screen (rejection email) | Tilted spreadsheet of deadlines (0:30-0:37) |
+| Navy stat card | "Hàng chục trường. Hàng chục hạn nộp." card (0:37) |
+| Product UI cards on light background | Tilted ApplySpark UI mockups with a gold glow, push-ins and slight rotation (0:66-1:30) |
+| Blue end card with URL pill | Blue end card with logo, tagline and applysparkvn.com (1:54) |
+
+Built video: `ApplySpark_Prop_Video.mp4` (960x540, 24 fps, 2:00, synthesized score, subtitles only, no recorded voice).
+Rebuild: `python3 render_audio.py && python3 render_video.py silent.mp4`, then mux with ffmpeg.
